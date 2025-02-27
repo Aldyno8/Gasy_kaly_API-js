@@ -20,9 +20,6 @@ const errorHandler = (error) => {
     if (error.syscall !== "listen"){
         throw error;
     }
-const adress = server.adress();
-const bind = typeof adress === "String" ? "pipe" + adress : "port" + port;
-
 switch (error.code) {
     case "EACCES":
       console.error(bind + "requires elevated privileges.");
